@@ -1,0 +1,59 @@
+/* 하단 */
+footer{
+  font-family: 'Noto Sans KR', sans-serif;
+}
+footer .wrap{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  width: 1440px;
+  margin: 0 auto;
+  border: 3px solid #999;
+  border-top-color: rgb(153, 153, 153);
+  border-top-style: solid;
+  border-top-width: 3px;
+  box-sizing: border-box;
+  border-top: transparent;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+}
+footer .wrap h1{
+  margin-top: 0;
+}
+footer .wrap h1 a{
+  font-size: 0;
+  background-image: url(../img/logo.svg);
+  width: 80px;
+  height: 80px;
+  display: block;
+
+}
+footer .wrap address{
+  width: 68%;
+}
+footer .wrap address strong{
+  font-weight: bold;
+  margin-right: 8px;
+}
+footer .wrap address strong:nth-child(n+2){
+  margin-left:20px;
+}
+footer .wrap p{
+    
+}
+footer .wrap p.copyright{
+  position: absolute;
+  left: 111px;
+  top: 72px;
+}
+footer .wrap p.tel{
+  margin-right: 22px;
+}
+footer .wrap p.tel strong{
+  font-size: 44px;
+  vertical-align: top;
+  line-height: 0.7;
+}
+
+
+

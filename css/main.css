@@ -1,0 +1,397 @@
+main{
+  position: relative;
+}
+section{
+  width: 1440px;
+  margin: 0 auto;
+  border: 3px solid #999;
+  box-sizing: border-box;
+  border-top: transparent;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+.wrap{
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+.subject{
+  font-weight: 500;
+  background-image: url(../img/companysubject-transparent.png);
+  width: 220px;
+  height: 70px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  line-height: 70px;
+}
+.subject2{
+  font-size: 40px;
+  font-family: 'Nanum Myeongjo', serif;
+  font-weight: 700;
+}
+section#about{
+
+}
+section#about .company{
+  display: flex;
+  flex-direction: row-reverse; /*정렬방향:수평반대로*/
+
+}
+section#about .company div{
+  width: 50%;
+}
+section#about .company div:first-child{/* :first-child  첫번째자식요소 */
+  display: flex; /* 기본수평왼쪽정렬 */
+  flex-direction: column; /* 수직으로 정렬 */
+  justify-content: center; /* 정렬방향의 중앙배치 */
+  font-family: 'Noto Sans KR', sans-serif;
+}
+section#about .company div:first-child+div{
+  text-align: center;
+}
+section#about .company .subject{
+ 
+}
+section#about .company h2+p{
+  line-height: 1.5;
+  font-size: 20;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+section#about .company h2 + p span{
+  
+  font-size: 35px;
+}
+section#about .company h2+p+p{
+  line-height: 1.2;
+  margin-bottom: 70px;
+}
+section#about .company .go{
+    
+  background-color: #333333;
+  color: #fff;
+  font-size: 13px;
+  padding: 20px 50px;
+}
+section#about .company span.control{
+  margin-top: 70px;
+}
+section#about .company span.control button{
+  border: none;
+  background-color: transparent;
+  font-size: 0;
+  width: 50px;
+  height: 50px;
+  background-size: 57%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  border: 1px solid;
+  border-radius: 50%;
+  background-position: center;
+}
+section#about .company span.control button.prev{
+  background-image: url(../img/r-arrow.svg);
+  transform: rotate(180deg);
+  background-position-x: center;
+  margin-right: 30px;
+}
+section#about .company span.control button.next{
+  background-image: url(../img/r-arrow.svg);
+  background-position-x: center;
+}
+section#about .company img{
+  max-width: 100%; /* 최대크기는 원래크기만큼만 커지게 */
+  width:70%;
+  transition-property: opacity;
+  transition-duration: 0.5s;
+  transition: opacity 0.5s;
+}
+section#about .company img:hover{
+  opacity: 0.3;
+}
+section#about .company img:first-child + img{ /* img태그는 인라인태그 인라인태그를 중앙정렬하려면 부모요소에 text-align:center */
+  display: none; /*보이지않게*/
+}
+
+/* ------------------------------------서비스--------------------------------------- */
+#service{
+
+}
+#service .wrap{
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+#service .wrap h2.subject{
+  margin: 0 auto;
+}
+#service .wrap h2+.p{
+  
+  margin-top: 26px;
+}
+#service .wrap .p{
+  text-align: center;
+}
+#service .wrap ul{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 60px;
+  text-align: center;
+}
+#service .wrap ul li{
+  border-top: 3px solid;
+  border-bottom: 3px solid;
+  width: 27%;
+  padding: 100px 0;
+  position: relative;
+}
+#service .wrap ul li::after{
+  content: "";
+  width: 237px;
+  height: 237px;
+  display: block;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-top: 53px;
+}
+#service .wrap ul li:nth-child(1)::after{
+  background-image: url(../img/sect03-cont01.svg);
+}
+#service .wrap ul li:nth-child(2)::after{
+  background-image: url(../img/sect03-cont02.svg);
+}
+#service .wrap ul li:nth-child(3)::after{
+  background-image: url(../img/sect03-cont03.svg);
+}
+#service .wrap ul li h3{
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 32px;
+  margin-bottom: 32px;
+  font-weight: 700;
+}
+#service .wrap ul li h3::after{
+  content: "";
+  width: 200px;
+  display: block;
+  border-bottom: 3px solid #ccc;
+  margin: 0 auto;
+  margin-top: 8px;
+}
+#service .wrap ul li p{
+  font-size: 18px;
+  line-height: 1.8;
+  /*! width: 70%; */
+  /*! margin: 0 auto; */
+  padding: 0 60px;
+}
+#service .wrap ul li .overcontents{
+  position: absolute;
+  left: 0;
+  top: 60px;
+  background-color: #f5f2e1;
+  line-height: 1.3;
+  /*   display: none; */
+  opacity:0; /* 투명도 */
+  transition: all 0.7s; /* 변이: 값의 차이만큼 애니메이션 처리 all은 모든속성들 0.7s(초) */
+}
+#service .wrap ul li:hover .overcontents{
+  /*   display: block; */
+  opacity: 1;
+  top: 80px;
+}
+#service .wrap ul li .overcontents h3{
+  
+}
+#service .wrap ul li .overcontents p{
+  line-height: 1.5;
+  font-size: 16px;
+  padding: 0 14px;
+}
+#service .wrap ul li .overcontents p:nth-of-type(2){
+  margin: 20px 0 40px;
+}
+#service .wrap ul li .overcontents img{
+  
+}
+
+#nth{
+  
+}
+#nth p{
+  
+}
+#nth p:nth-child(2n+2){ /*odd 홀수번째,even은 짝수번째,n+4 4번째부터,2n+2 2번째에 2배수로*/
+  background-color: red;
+}
+
+
+/* ---------------------------------히스토리----------------------------------- */
+#history{
+
+}
+#history .wrap{
+  
+  width: 1000px;
+  margin: 0 auto;
+  /*! margin-left: 200px; */
+  background-image: url(../img/sect04-main.gif);
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-size: 41%;
+  background-origin: content-box;
+/*   background-origin: padding-box; */
+  /*! border: 80px solid rgba(10,10,10,0.4); */
+  /*! background-origin: border-box; */
+}
+#history .wrap hgroup{
+  
+}
+#history .wrap hgroup h2{
+  
+}
+#history .wrap hgroup h3{
+  line-height: 1.6;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  font-size: 20px;
+}
+#history .wrap hgroup h3 span{
+  display: block;
+}
+#history .wrap ul.list{
+  line-height: 2.5;
+  padding-left: 52px;
+  position: relative;
+}
+#history .wrap ul.list::before{
+  content: "";
+  width: 10px;
+  height: 10px;
+  display: block;
+  border: 3px solid;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+#history .wrap ul.list::after{
+  content: "";
+  height: 95%;
+  display: block;
+  border-left: 3px solid;
+  position: absolute;
+  left: 6px;
+  top: 13px;
+}
+#history .wrap ul.list li{
+  
+}
+#history .wrap ul.list li:nth-child(1){
+  line-height: 1;
+  margin-bottom: 12px;
+}
+#history .wrap ul.list li:nth-child(n+2){
+  color: #bbb;
+}
+#history .wrap ul.list li:nth-child(1){
+  line-height: 1;
+  margin-bottom: 12px;
+}
+#history .wrap ul.list li:nth-child(n+2){
+  color: #bbb;
+}
+aside{
+  width: 80px;
+  height: 80px;
+  border: 2px solid;
+  border-radius: 50%;
+  position: absolute;
+  right: 100px;
+  bottom: 100px;
+  text-align: center;
+  line-height: 118px;
+}
+aside button{ /*버튼스타일 초기화*/
+  font-size: 0;
+  border: none; /* 테두리 없애기 */
+  background-color: transparent; /*  배경색투명하게 */
+}
+aside button::before{
+  content: "";
+  width:40px;
+  height:40px;
+  display:block;
+  border:2px solid;
+  border-left: transparent;
+  border-bottom: transparent;
+  transform: rotate(-45deg);
+}
+
+/* --------------------------------------찾아오는 길------------------------------ */
+
+section#location{
+
+}
+section#location .wrap{
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  column-gap: 70px;
+}
+section#location .wrap iframe{
+  border: 2px solid #000 !important;
+  width: 790px;
+  height: 390px;
+}
+section#location .wrap .right{
+  
+}
+section#location .wrap .right hgroup{
+  
+}
+section#location .wrap .right hgroup h2.subject{
+  margin: 0 auto;
+}
+section#location .wrap .right hgroup h3{
+  
+  line-height: 3;
+}
+section#location .wrap .right p{
+  
+  line-height: 2;
+}
+section#location .wrap .right a{
+  margin-top: 21px;
+  display: inline-block;
+  line-height: 3;
+  padding: 0px 45px;
+  /*! display: block; */
+  /*! width: 276px; */
+  /*! line-height: 4; */
+  /*! text-align: center; */
+  border: 1px solid;
+}
+section#location .wrap .right a::after{
+  content: "";
+  width: 10px;
+  height: 10px;
+  border: 2px solid #000;
+  display: inline-block;
+  margin-left: 10px;
+  border-left: transparent;
+  border-bottom: transparent;
+  transform: rotate(45deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,84 @@
+div#title{
+  background-image:url(../img/sect01-bg.png);
+  background-repeat: no-repeat;
+  background-size:150%;
+  background-position-x:left;
+  background-position-y:417px;
+  background-origin: content-box,border-box;
+}
+div#title .in{
+  height: 600px; 
+  width: 1440px;
+  margin: 0 auto;
+  border: 3px solid #999;
+  border-top: transparent;
+  font-family: 'Noto Sans KR', sans-serif;
+  padding-top: 100px;
+  padding-left: 100px;
+  box-sizing: border-box; /* padding을 주면 크기가 커지는데 크기가 커지지 않게 처리 */
+  position: relative;
+}
+
+div#title h2{
+  font-size: 21px;
+}
+div#title h2 + p{ /* + 인접선택자,형제선택자 h2다음에 오는 p */
+  font-size: 50px;
+  line-height: 3;
+}
+div#title h2 + p + p{
+  font-size: 16px;
+  margin-bottom: 40px;
+  line-height: 1.5;
+}
+div#title a{ /* 인라인태그에는 padding(크기에 영향)이 정확히 적용되지 않는다.display:block로 전환 */
+  border: 1px solid;
+  padding: 20px 30px;
+  margin-top: 30px;
+  display: inline-block;
+  /*! width: 250px; */
+  text-align: center;
+  transition: all 0.5s;
+}
+div#title a::after{
+  content: "";
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border: 2px solid;
+  margin-left: 10px;
+  border-left: transparent;
+  border-bottom: transparent;
+  transform: rotate(45deg);
+}
+div#title a:hover{
+  background-color: #000;
+  color: #fff;
+}
+div#title .in::after{
+  content: "";
+  width: 639px;
+  height: 500px;
+  display: block;
+  outline: 1px solid;
+  background-image: url(../img/sect01-bg02.png),url(../img/rice01.gif), url(../img/rice03.gif);
+  background-repeat: no-repeat;
+  background-size: 86%,49%,26%;
+  background-position-x: 3%,56%,104%;
+  background-position-y: bottom,-12%,45%;
+  background-origin: content-box,border-box;
+  position: absolute;
+  bottom: 66px;
+  right: 1px;
+}
+
+
+
+
+
+
+
+
+
+
+
